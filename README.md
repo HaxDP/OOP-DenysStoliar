@@ -1,2 +1,4 @@
 # OOP-DenysStoliar
 Stoliar Denys tasks from subject "OOP"
+# upd 1.0
+## 09.02.2025 added and upgraded lab1 for OOP
