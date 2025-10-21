@@ -12,7 +12,7 @@ namespace Lab3V18
         // properties
         public string Name { get; set; }
         public double Calories { get; set; }
-        public double Weight { get; set; } // weight in g
+        public double Weight { get; set; } // weight in grams
 
         // base class
         public FoodItem(string name, double calories, double weight)
@@ -47,6 +47,14 @@ namespace Lab3V18
             Console.WriteLine($"total calories: {CalculateTotalCalories():F2} ccal");
             Console.WriteLine("---");
         }
+
+        /// <summary>
+        /// Destructor
+        /// </summary>
+        ~FoodItem()
+        {
+            Console.WriteLine($"FoodItem '{Name}' is being destroyed");
+        }
     }
 
     /// <summary>
@@ -79,6 +87,14 @@ namespace Lab3V18
             base.DisplayInfo();
             Console.WriteLine($"availability of seeds: {(HasSeeds ? "yes" : "no")}");
             Console.WriteLine("---");
+        }
+
+        /// <summary>
+        /// Destructor
+        /// </summary>
+        ~Fruit()
+        {
+            Console.WriteLine($"Fruit '{Name}' is being destroyed");
         }
     }
 
@@ -122,6 +138,14 @@ namespace Lab3V18
             base.DisplayInfo();
             Console.WriteLine($"type of meat: {MeatType}");
             Console.WriteLine("---");
+        }
+
+        /// <summary>
+        /// Destructor
+        /// </summary>
+        ~Meat()
+        {
+            Console.WriteLine($"Meat '{Name}' is being destroyed");
         }
     }
 
@@ -192,6 +216,13 @@ namespace Lab3V18
             {
                 Console.WriteLine($"{fruit.Name} - seed: {((Fruit)fruit).HasSeeds}");
             }
+
+            // Clear the list to demonstrate destructors
+            foodItems.Clear();
+            
+            // Force garbage collection to show destructors working
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
 
             Console.WriteLine("\nthe program has finished. Press any key...");
             Console.ReadKey();
