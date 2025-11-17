@@ -3,4 +3,6 @@ obj/
 *.user
 *.suo
 *.vs/
+*.exe
 .vscode/
+images/
