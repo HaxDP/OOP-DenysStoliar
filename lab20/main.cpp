@@ -172,7 +172,7 @@ int main()
     order validOrder(2, "Stoliar Denys", 250.75);
     service.processOrder(validOrder);
 
-    order invalidOrder(3, "Sasha Harchyk", -50.0);
+    order invalidOrder(3, "Sasha Kharchuk", -50.0);
     service.processOrder(invalidOrder);
 
     std::cout << "\ndemonstrating repository work" << std::endl;

@@ -1,0 +1,6 @@
+[FileLogger] Data processed in context. Input=DATTA_222, Output=EBUUB`333
+[FileLogger] Observer received processed data. Strategy=EncryptDataStrategy, Data=EBUUB`333
+[filelogger] data processed in context, input=DATTA_222, output=EBUUB`333
+[filelogger] observer received processed data, strategy=EncryptDataStrategy, data=EBUUB`333
+[filelogger] data processed in context, input=datta_222, output=ebuub`333
+[filelogger] observer received processed data, strategy=encryptdatastrategy, data=ebuub`333
